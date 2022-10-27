@@ -1,0 +1,20 @@
+/**
+ * The application configuration.
+ * @author A true hipster
+ */
+application {
+    config {
+        applicationType monolith
+        baseName orderbe
+        databaseType mongodb
+        packageName tech.tora.app
+        reactive true
+        skipClient true
+    }
+
+    entities * dto * with mapstruct
+}
+
+enum Status {
+    NEW, ACCEPTED, PROCESSING, COMPLETED, SERVED
+}
